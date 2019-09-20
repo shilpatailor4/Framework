@@ -11,11 +11,26 @@ public class DummyTestB extends BaseTest {
 	{
 		System.out.println(System.getProperty("user.dir"));
 		
-		openBrowser("Mozila");
+		openBrowser("Chrome");
 		
 		navigate("appurl");
-		
+		username("email_xpath");
+		emailNext("button_xpath");
+		password("password_xpath");
+		passwordNext("button1_xpath");
+		compose("compose_xpath");
+		to("to_name");
+		cc("cc_xpath");
+		cc_email("ccemail_name");
+		subject("subject_name");
+		body("body_xpath");
+		sendbtn("send_xpath");
+		sendpage("sendpage_xpath");
+		//sentmail("sentmailclick_xpath");
+	
 		
 	}
+
+	
 
 }
