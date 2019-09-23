@@ -1,5 +1,7 @@
 package testcases;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -7,7 +9,7 @@ import base.BaseTest;
 public class DummyTestB extends BaseTest {
 	
 	@Test
-	public void testB()
+	public void testB() throws InterruptedException, IOException
 	{
 		System.out.println(System.getProperty("user.dir"));
 		
@@ -27,6 +29,7 @@ public class DummyTestB extends BaseTest {
 		sendbtn("send_xpath");
 		sendpage("sendpage_xpath");
 		//sentmail("sentmailclick_xpath");
+		attachDoc("addFile_xpath");
 	
 		
 	}

@@ -124,6 +124,17 @@ public class BaseTest {
 		textbody.sendKeys(pro.getProperty("body_text"));
 	}
 	
+	public void attachDoc(String file) throws InterruptedException, IOException
+	{
+		//driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@tabindex='1']")));
+		WebElement addFile = driver.findElement(By.xpath("addFile_xpath"));
+		addFile.click();
+		
+		//Using Autoit tool and write a script and paste script path (Chrome path scrit is changed, it'll work only firefox)
+		Runtime.getRuntime().exec("E:\\Shilpa\\Selenium\\AutoitFiles\\GmailFile.exe");
+		Thread.sleep(2000);
+		
+	}
 	public void sendbtn(String btnclic)
 	{
 		driver.findElement(By.xpath(pro.getProperty("send_xpath"))).click();
